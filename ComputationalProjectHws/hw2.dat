@@ -1,0 +1,20 @@
+set FEEDS := 'corn' 'tankage' 'alfalfa';
+set NUTRIENTS := 'carbohydrates' 'protein' 'vitamins';
+
+param cost :=
+    'corn'     84
+    'tankage'  72
+    'alfalfa'  60;
+
+param min_req :=
+    'carbohydrates' 200
+    'protein'       180
+    'vitamins'      150;
+
+param content :
+                     'corn'    'tankage' 'alfalfa' :=
+    'carbohydrates'     90         20        40
+    'protein'           30         80        60
+    'vitamins'          10         20        60;
+
+	
