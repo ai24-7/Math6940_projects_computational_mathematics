@@ -1,0 +1,27 @@
+# Third dataset for scenario 3
+
+# Sets
+set T := t1 t2 t3 t4;
+set S := s1;
+param N := 2;
+set K := 1 2;
+
+# Parameters
+param p :
+        s1 :=
+    t1   1
+    t2   2
+    t3   3
+    t4   4
+;
+
+param d :=
+    t1   1
+    t2   1
+    t3   1
+    t4   1
+;
+
+param r :=
+    s1   2
+;

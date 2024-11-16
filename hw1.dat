@@ -1,0 +1,25 @@
+set WAREHOUSES := "New York" "Los Angeles" "Chicago" "Atlanta";
+set REGIONS := 1 2 3;
+
+param FixedCost := 
+    "New York" 400
+    "Los Angeles" 500
+    "Chicago" 300
+    "Atlanta" 150;
+
+param Capacity := 
+    "New York" 100
+    "Los Angeles" 100
+    "Chicago" 100
+    "Atlanta" 100;
+
+param Demand :=
+    1 80
+    2 70
+    3 40;
+
+param ShippingCost: 1 2 3 :=
+    "New York"    20 40 50
+    "Los Angeles" 48 15 26
+    "Chicago"     26 35 18
+    "Atlanta"     24 50 35;

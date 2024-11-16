@@ -1,0 +1,20 @@
+# Load the model file
+model model1_scenario3.mod;
+
+# Load the data file
+data data_synthetic.dat;
+
+# Choose the solver 
+option solver gurobi;
+
+# Solve the model
+solve;
+
+# Display the decision variables and parameters
+display x;
+display s;
+display D;
+display C;
+
+# Exit AMPL
+quit;

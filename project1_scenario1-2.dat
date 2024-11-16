@@ -1,0 +1,23 @@
+
+# Sets
+set T := Task1 Task2 Task3;
+set S := Server1 Server2;
+
+# Parameters
+
+# Processing times (in hours)
+param p : Server1  Server2 :=
+    Task1     2       3
+    Task2     1       2
+    Task3     1.5     1;
+
+# Resource demands
+param d :=
+    Task1   2
+    Task2   1
+    Task3   1;
+
+# Resource capacities
+param r :=
+    Server1  2
+    Server2  2;

@@ -1,0 +1,27 @@
+# Second dataset for scenario 3
+# Used Gurobi
+
+# Sets
+set T := t1 t2 t3;
+set S := s1 s2;
+param N := 3;
+set K := 1 2 3;
+
+# Parameters
+param p :
+        s1   s2 :=
+    t1   3   2
+    t2   2   4
+    t3   5   1
+;
+
+param d :=
+    t1   1
+    t2   2
+    t3   1
+;
+
+param r :=
+    s1   3
+    s2   3
+;
