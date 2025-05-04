@@ -1,0 +1,33 @@
+#option solver cplex;
+option cplex_options 'timelimit=1000';
+
+var cccc := 0;
+param min_val;
+param chosen_s symbolic;
+param chosen_k;
+
+# Reset all x to 0
+for {t in T, a in S, k in K} {
+    let x[t, a, k] := 0;
+}
+
+# Construct initial feasible solution
+for {t in T} {
+    let cccc := cccc + 1;
+
+    let min_val := Infinity;
+    for {sv in S} {
+        if p[t, sv] < min_val then {
+            let min_val := p[t, sv];
+            let chosen_s := sv;
+        }
+    }
+
+    let chosen_k := 1 + ((cccc - 1) mod N);
+    let x[t, chosen_s, chosen_k] := 1;
+}
+
+solve;
+
+display Z, x, s, D, C, C_batch, y, E, U, L;
+
