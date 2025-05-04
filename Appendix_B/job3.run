@@ -1,0 +1,17 @@
+# Load the model file
+#model model2.mod;
+
+# Load the data file
+#data data2.dat;
+
+
+# Solve the model
+solve;
+
+# Display the decision variables and parameters
+display x;
+display C;
+display E;
+display U;
+display L;
+
